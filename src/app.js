@@ -1,6 +1,8 @@
 import ReactDOM from 'react-dom';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import 'react-dates/lib/css/_datepicker.css'
+
 import AppRouter from './routers/AppRouter'
 import React from 'react';
 
@@ -11,7 +13,7 @@ import getVisibleExpenses from './selectors/expenses';
 
 import { Provider } from 'react-redux';
 
-import 'react-dates/lib/css/_datepicker.css'
+
 
 const store = configureStore();
 console.log('test');
