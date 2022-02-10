@@ -14,7 +14,7 @@ import { Provider } from 'react-redux';
 import 'react-dates/lib/css/_datepicker.css'
 
 const store = configureStore();
-
+console.log('test');
 // store.dispatch(addExpense({ description: 'Water bill',  amount:4500,  createAt:1000 }));
 // store.dispatch(addExpense({ description: 'Gas bill',  createAt:2000 }));
 // store.dispatch(addExpense({ description: 'Rent',  amount:3500, createAt:500 }));
@@ -39,4 +39,4 @@ const jsx = (
 
 ReactDOM.render(jsx, document.getElementById('app'));
 
-//next(13) 128
+//next(13) 134
