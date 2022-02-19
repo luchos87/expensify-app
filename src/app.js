@@ -7,7 +7,7 @@ import AppRouter from './routers/AppRouter'
 import React from 'react';
 
 import configureStore from './store/configureStore'
-import { addExpense } from './actions/expenses';
+import { startSetExpenses } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
 
@@ -18,7 +18,7 @@ import './firebase/firebase';
 //import './playground/promises';
 
 const store = configureStore();
-console.log('test');
+
 // store.dispatch(addExpense({ description: 'Water bill',  amount:4500,  createAt:1000 }));
 // store.dispatch(addExpense({ description: 'Gas bill',  createAt:2000 }));
 // store.dispatch(addExpense({ description: 'Rent',  amount:3500, createAt:500 }));
@@ -41,6 +41,10 @@ const jsx = (
     </Provider>
 );
 
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(<p>loading....</p>, document.getElementById('app'));
+
+store.dispatch(startSetExpenses()).then(() => {
+    ReactDOM.render(jsx, document.getElementById('app'));
+});
 
 //next(15) 155
