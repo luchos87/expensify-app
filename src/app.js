@@ -13,7 +13,9 @@ import getVisibleExpenses from './selectors/expenses';
 
 import { Provider } from 'react-redux';
 
+import './firebase/firebase';
 
+//import './playground/promises';
 
 const store = configureStore();
 console.log('test');
@@ -41,4 +43,4 @@ const jsx = (
 
 ReactDOM.render(jsx, document.getElementById('app'));
 
-//next(13) 137
+//next(15) 155
