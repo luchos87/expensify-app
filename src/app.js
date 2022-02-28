@@ -15,6 +15,7 @@ import { Provider } from 'react-redux';
 
 import { firebase } from './firebase/firebase';
 
+import LoadingPage from './components/LoadingPage'
 
 //import './playground/promises';
 
@@ -51,7 +52,7 @@ const renderApp = () => {
 };
 
 
-ReactDOM.render(<p>loading....</p>, document.getElementById('app'));
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 
 
@@ -71,4 +72,4 @@ firebase.auth().onAuthStateChanged((user) => {
     }
 });
 
-//next(16) 164
+//next(17) 175
